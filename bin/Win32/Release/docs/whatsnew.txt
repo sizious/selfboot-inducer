@@ -1,0 +1,147 @@
+           _    _ _           _   _       _   _                 ___  
+          | |  | | |         | | ( )     | \ | |               |__ \ 
+          | |  | | |__   __ _| |_|/ ___  |  \| | _____      __    ) |
+          | |/\| | '_ \ / _` | __| / __| | . ` |/ _ \ \ /\ / /   / / 
+          \  /\  / | | | (_| | |_  \__ \ | |\  |  __/\ V  V /   |_|  
+           \/  \/|_| |_|\__,_|\__| |___/ \_| \_/\___| \_/\_/    (_)  
+                                                           
+__                            __________________________________________________
+__| Version 5.0 - 2012-12-31 |__________________________________________________
+
+ This is the *final* version of Selfboot Inducer 5.0, after many tests, the
+ application is now very stable.
+ 
+ I know that releasing this application in 2012 is too late, many of people
+ use the excellent SD card adapter, but like I said before, I started this
+ project back in 2008 and I'm happy to finish the work... 
+
+ The complete source code's released with the program. It includes a new
+ version of the MRImage.pas class to handle .MR logo files, written for 
+ Delphi XE2, a very modern Delphi environment.
+  
+ Merry X-mas '12 and Happy New Year '13 to everyone !
+ 
+- Fixed: Some minor modifications
+- Fixed: Code cleanup
+- Added: Complete source code
+- Fixed: CD-RW drives detection (with the help of VasiliyRS)
+- Fixed: Correct encoding for the generated batches (with the help of VasiliyRS)
+__                                     _________________________________________
+__| Version 5.0 *BETA 2* - 2012-10-21 |_________________________________________                                                           
+
+- Fixed: The MR code decompression bug was fixed, so the feature is now
+  available! It supports every MR files created by third party tools and legit
+  MR files too, included Windows CE or bleem! ones.
+- Added: The Packages List scanner is now multi-threaded, so the ".\packages"
+  directory scanning is much faster and don't hang the main window.
+- Fixed: The "Select all" and "Unselect all" buttons will check/uncheck all
+  packages in the selected filter view (in clear: if you filter your packages
+  list with "Games", using "Unselect all" will unselect every "Games" packages,
+  instead of unchecking ALL packages).
+__                                     _________________________________________
+__| Version 5.0 *BETA 1* - 2012-09-16 |_________________________________________                                                           
+
+ This is a complete rewrite of the program; the only thing common with the old
+ v4.3 is... the name of the program. All features of the previous version has
+ been made for this first public release. The programmation language was 
+ switched from BCX (the free Basic To C compiler) to the Delphi XE2 environment.
+ 
+ This version is labeled *BETA 1* because a last minute bug was discovered in 
+ the MR code decompression, so the Bootstrap (IP.BIN) logo feature was 
+ disabled.
+ 
+- Added: Packages File List Selection:
+  - The file list display now the information of the SBI package, the 
+    package name (instead of the file name), the screenshot, the in-menu 
+    description and of course, the "comment" package, which helps you to use 
+    it.
+  - You can filter the package list by selecting the proper package kind
+    (Apps, Demos, Emus or Games).
+  - A "Browse" button, allowing you to open the "packages" directory faster
+  - A right-click pop-up menu on the files list, allow you to "Locate on Disk"
+      the selected package.
+- Added: The application is fully compatible with Windows 7; including x64 
+  version (untested).
+- Added: Burning / Image Generation process:
+  - Possibility to generate Alcohol 120% images
+  - For each image creation method (including burning with CDRecord) you can 
+    choose for Audio/Data or Data/Data structure format. The Data/Data method
+    is more newer and should work on every Dreamcast made (Audio/Data may not 
+    work on the lastest produced Dreamcast).
+  - CDRecord : More easier process (like BootDreams).
+  - When you click on an image generation / burning panel, a simple help is
+    available on the left (explaning how to use the feature; for example why
+    choosing Audio/Data or Data/Data format!).
+- Added: Configuration Dialog :
+  - Auto-Dummy function (for 700MB CD-R... who's using 650MB CD-R in 2012 ?!)
+    The dummy file is named "0.0" and will be hidden from the filesystem.
+  - You can hide the Bootstrap file (IP.BIN) from the filesystem.
+  - Possibility to choose a boostrap logo (iplogo.mr before); this feature is
+    currently disabled because a bug was found, it will be available in the
+    final release of Selfboot Inducer 5.
+- Added: Main Toolbar:
+  - An exit button (the big cross in the bottom-right corner).
+  - An help button.
+  - Icons are now 48x48 high-resolution.
+  - New group buttons (the "Make Disc" and "Trash" buttons are in the same
+    group, since they control disc preparation; before the "Trash" button was
+    in the bottom-right corner of the window).
+- Added: If you exit the application and it still working, a confirmation is
+  shown... it can be useful if you burn under CDRecord!
+- Fixed: New disc generation process, the code is more efficient and powerful.
+- Updated: Embedded tutorial; original by Curtiss Grymala
+- Updated: The state of the window and every option is now saved in a 
+  configuration file.
+- Updated: CDRTools package updated (v3.01a07-i686-pc-mingw32); no 
+  "cygwin1.dll" POSIX-emulator needed anymore.
+- Updated: New program icon...
+- Updated: A new about box dialog
+__                                                                ______________
+__| Version 4.3 *CDI4DC Stage III : Ultimate Power* - 2006-11-19 |______________
+
+- Added: Configuration dialog : 
+  - IP.BIN logo insertion
+  - ISO generation options (rock ridge, joliet...)
+  - You can change the temporary directory (where the temp ISO, CDI file'll be 
+    written)...
+- Added: XP Theme support
+- Added: Nero ASPI drivers for CDRecord (wnaspi32.dll)
+- Fixed: CDRecord MSInfo problems
+- Fixed: Code cleanup...
+__                                                               _______________
+__| Version 4.2 *CDI4DC Stage II : bin2boot death* - 2006-11-17 |_______________
+
+- Added: Replaced old cdi2nero and cdi2tao with newer cdi2nero (0.9.9). it adds 
+  a "-t" switch to generates a TAO image from command line. Now all generation 
+  image (CDI, NRG TAO and DAO) uses CDI4DC, so ... bin2boot's gone for good.
+- Fixed: New generation process... check it yourself.
+__                                      ________________________________________
+__| Version 4.1 *CDI4DC* : 2006-11-12  |________________________________________
+
+- Added: Replaced bin2boot by cdi4dc for the DiscJuggler creation image 
+  procedure *ONLY* (cdi2nero and cdi2tao.exe don't support CDI v4.0 images).
+- Fixed: The combobox has the first item selected by default
+- Fixed: Some GFX and version info changes...
+__                            __________________________________________________
+__| Version 4.0 : 2004-06-18 |__________________________________________________
+
+- Added: Support SBI v4.0 with comments.
+- Added: SBI packages selection : possibility to build a compilation with 
+         only the selected packages files.
+- Added: New generation code process.
+- Fixed: Code cleanup
+__                            __________________________________________________
+__| Version 3.0 : 2003-05-29 |__________________________________________________
+
+  (not available)
+__                      ________________________________________________________
+__| Version 2.1 : 2003 |________________________________________________________
+
+  (not available)  
+__                      ________________________________________________________
+__| Version 1.0 : 2002 |________________________________________________________
+
+- Initial release by burnerO
+- Based on the DreamInducer program by DCGrendel
+
+__[ -eof- ]_____________________________________________________________________

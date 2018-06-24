@@ -1,0 +1,18 @@
+// Image Producer Help
+TEXTCDI         RCDATA          ../rsrc/text/cdj.rtf
+TEXTNRG         RCDATA          ../rsrc/text/nero.rtf
+TEXTMDS         RCDATA          ../rsrc/text/alcohol.rtf
+
+// CDRecord Help
+TEXTCDR         RCDATA          ../rsrc/text/cdrtools.rtf
+
+// Tutorial
+TEXTHELP        RCDATA          ../rsrc/text/tutorial.rtf
+
+// Credits
+CREDITS         RCDATA          ../rsrc/about/credits.rtf
+ABOUT           BITMAP          ../rsrc/about/sbilogo.bmp
+
+// MR Preview
+SEGALIC         BITMAP          ../rsrc/mr/sega_lic.bmp
+
